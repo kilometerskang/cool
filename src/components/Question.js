@@ -3,17 +3,17 @@ import '../styles/Survey.scss';
 
 import { RadioInputGroup, RadioInput } from '@instructure/ui-radio-input'
 
-function Question(state) {
-  const handleInput = function (event, value) {
-    console.log(value);
+function Question({ question, inputs, updateScore }) {
+  const handleInput = (event, value) => {
+    updateScore(3 - ((value - 1) % 3));
   }
   
   return (
     <RadioInputGroup
       onChange={handleInput}
       name="example1"
-      description={state.question}>
-      {state.inputs.map(input => <RadioInput key={input.value} value={input.value} label={input.label} />)}
+      description={question}>
+      {inputs.map(input => <RadioInput key={input.value} value={input.value} label={input.label} />)}
     </RadioInputGroup>
   )
 }

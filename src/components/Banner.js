@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import { AppNav } from '@instructure/ui-navigation';
 import { Heading } from '@instructure/ui-elements';
+import { View } from '@instructure/ui-view'
 
 function Banner() {
   const [selectedIndex, setSelectedIndex] = useState(1);
@@ -11,9 +12,22 @@ function Banner() {
       screenReaderLabel="App navigation"
       visibleItemsCount={2}
       renderBeforeItems={
-        <Heading size="large" weight="bold">
-          Unscientific Coolness Test
-        </Heading>
+        <View
+          display="inline-block"
+          margin="small"
+          padding="small"
+          background="primary"
+          borderRadius="pill"
+          borderWidth="small"
+          position="relative"
+          textAlign="center"
+          withFocusOutline
+          focusPosition="offset"
+        >
+          <Heading size="large" weight="bold">
+            Unscientific Coolness🔥 Test
+          </Heading>
+        </View>
       }
     >
       <AppNav.Item

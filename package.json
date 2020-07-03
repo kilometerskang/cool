@@ -1,5 +1,5 @@
 {
-  "name": "instructure",
+  "name": "cool",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
     "@instructure/ui-radio-input": "^7.1.1",
     "@instructure/ui-tabs": "^7.1.1",
     "@instructure/ui-text": "^7.1.1",
+    "@instructure/ui-view": "^7.1.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",

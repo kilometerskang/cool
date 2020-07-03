@@ -3,13 +3,13 @@ import React from 'react';
 import { ProgressCircle } from '@instructure/ui-progress';
 import { Text } from '@instructure/ui-text';
 
-function Progress(state) {
+function Progress({ number, maxNumber }) {
   return (
     <ProgressCircle
       size="small"
       screenReaderLabel="Loading completion"
-      valueNow={state.number}
-      valueMax={state.maxNumber}
+      valueNow={number}
+      valueMax={maxNumber}
       margin="0 small 0 0"
       shouldAnimateOnMount
       formatScreenReaderValue={function ({ valueNow, valueMax }) {
