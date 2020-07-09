@@ -11,9 +11,9 @@ import { Grid } from '@instructure/ui-grid';
 
 function Survey() {
   const questions = [
-    "Do you listen to jazz?",
-    "Do you go to UCLA?",
-    "Would you devote your life to data structures and algorithms?"
+    'Do you listen to jazz?',
+    'Do you go to UCLA?',
+    'Would you devote your life to data structures and algorithms?'
   ];
   const questionInputs = [
     [
@@ -38,7 +38,7 @@ function Survey() {
   const [number, setNumber] = useState(1);
   const [question, setQuestion] = useState(questions[0]);
   const [inputs, setInputs] = useState(questionInputs[0]);
-  const [btnTxt, setBtnTxt] = useState("Next");
+  const [btnTxt, setBtnTxt] = useState('Next');
   const [redirect, setRedirect] = useState(false);
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
@@ -48,9 +48,9 @@ function Survey() {
     setTotal(total + tmp);
     setNumber(number + 1);
     if (number === maxNumber - 1) {
-      setBtnTxt("View Results");
+      setBtnTxt('View Results');
     }
-    if (btnTxt === "View Results") {
+    if (btnTxt === 'View Results') {
       setRedirect(true);
     }
 

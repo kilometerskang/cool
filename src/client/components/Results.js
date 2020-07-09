@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Text } from '@instructure/ui-text';
 import { Grid } from '@instructure/ui-grid';
 import { Heading } from '@instructure/ui-elements';
-import { ProgressBar } from '@instructure/ui-progress'
+import { ProgressBar } from '@instructure/ui-progress';
 
 function Results({ score }) {
+  const [msg, setMsg] = useState('');
+
   return (
     <Grid colSpacing="large" rowSpacing="large">
       <Grid.Row hAlign="center">
@@ -15,19 +17,22 @@ function Results({ score }) {
       </Grid.Row>
       <Grid.Row hAlign="center">
         <Text size="medium">
-          You're alright.
+          {msg}
         </Text>
       </Grid.Row>
       <ProgressBar
         valueNow={score}
         valueMax={9}
         meterColor={({ valueNow, valueMax }) => {
-          if (valueNow < 4) {
+          if (valueNow < 5) {
+            setMsg('Sorry, you are not very cool.');
             return 'danger';
-          } else if (valueNow < 7) {
+          } else if (valueNow < 8) {
+            setMsg('You\'re alright.');
             return 'warning';
           }
           else {
+            setMsg('Keep doing what you do 😎');
             return 'success';
           }
         }}

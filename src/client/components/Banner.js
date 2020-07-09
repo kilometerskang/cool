@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import { AppNav } from '@instructure/ui-navigation';
 import { Heading } from '@instructure/ui-elements';
-import { View } from '@instructure/ui-view'
+import { View } from '@instructure/ui-view';
 
 function Banner() {
   const [selectedIndex, setSelectedIndex] = useState(1);
